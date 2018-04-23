@@ -77,54 +77,5 @@ class Player
             }
         },this.interval);
     }
-    playIdle()
-    {
-        var i = 0;
-        var queue = this.queue;
-        var idleQueue = this.idleQueue;
-        var element = this.element;
-        var id = Math.floor(Math.random()*(idleQueue.length - 1));
-        $(element).append($(idleQueue[id]));
-        var oldId = null;
-        var self = this;
-        $(queue[0]).hide();
-        $(queue[0]).remove();
-        queue.shift();
-        console.log(this.interval);
-        var idleInterval = setInterval(function()
-        {
-            if (oldId !== null)
-            {
-                
-                $(idleQueue[oldId][idleQueue[oldId].length-1]).hide();
-                $(idleQueue[oldId][idleQueue[oldId].length-1]).remove();
-            }
-            if (i == idleQueue[id].length)
-            {
-                if (queue.length > 0)
-                {
-                    clearInterval(idleInterval);
-                    self.play();
-                }
-                else
-                {
-                    oldId = id;
-                    id = Math.floor(Math.random()*(idleQueue.length - 1));
-                    $(element).append($(idleQueue[id]));
-                    i = 0;
-                }
-                
-            }
-            if (i > 0)
-            {
-                $(idleQueue[id][i-1]).hide();
-                $(idleQueue[id][i-1]).remove();               
-            }
-            $(idleQueue[id][i]).show();
-            i++;
-            
-        },this.interval);
-       
-    }
 }
 
