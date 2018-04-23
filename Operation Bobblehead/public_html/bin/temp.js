@@ -7,36 +7,6 @@
 var fps = 30;
 var interval = (1/fps)*1000;
 var animations = new Array();
-function play()
-{
-    animations = $('#player').children();
-    console.log(animations);
-    var i = 0;
-    setInterval(function()
-    {
-        if (i > 0)
-        {
-            $(animations[i-1]).remove();
-        }
-        $(animations[i]).show();
-        i++;
-        if (i == animations.length)
-        {
-            i = 0;
-        }
-    },interval);
-}
-
-function createJSON()
-{
-    var animation = $('#animation').children();
-    var o = new Array();
-    for (i = 0; i < animation.length; i++)
-    {
-        o.push($(animation[i]).attr('src'));
-    }
-    console.log(JSON.stringify(o));
-}
 
 function loadAnimation()
 {
@@ -68,18 +38,10 @@ function loadAnimation()
         $('#animations').append(animation);
     });
 }
-function add(string)
-{
-    console.log(animations);
-    var kids = $('#'+string).children().clone();
-    console.log('kids:');
-    console.log(kids);
-    $(kids).appendTo("#player");    
-    animations = $.merge(animations, kids);
-    console.log(animations);
-}
+
 var player = new Player("#player",30);
 loadAnimation();
+
 function addAnim(string)
 {
     var kids = $('#'+string).children().clone();

@@ -13,8 +13,7 @@ class Player
         this.element = e;
         this.fps = fps;
         this.interval = (1/fps)*1000;
-        
-        console.log($(this.element).html());
+        this.player;
     }
     
     // Add PNG Sequence to the active queue
@@ -35,6 +34,8 @@ class Player
         this.fps = i;
         this.interval = (1/this.fps)*1000;
     }
+    
+    // Play animations
     play()
     {
         // Set variables
@@ -48,7 +49,7 @@ class Player
         var self = this;
         
         // Timed subfunction
-        var interval = setInterval(function()
+        this.player = setInterval(function()
         {
             // Check if we are on a next image, if so, remove the first one
             if (i > 0)
@@ -58,8 +59,6 @@ class Player
                 queue.shift();
                 i = 0;                
             }
-            
-            console.log(queue[i]);
             // Show current PNG and increase increment
             $(queue[i]).show();
             i++; 
@@ -93,6 +92,14 @@ class Player
                 }
             }
         },this.interval);
+    }
+    
+    // Stop the player
+    stop()
+    {
+        clearInterval(this.player);
+        $(this.element).children().hide();
+        $(this.element).empty();
     }
 }
 
