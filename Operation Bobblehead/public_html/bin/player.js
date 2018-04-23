@@ -47,13 +47,6 @@ class Player
         {
             console.log('i: ' + i + ' | length: ' + queue.length);
            
-            /*if (i == queue.length || queue.length === 0)
-            {
-                clearInterval(interval);
-                i = 0;
-                self.playIdle();
-                console.log('end');
-            }*/
             if (i > 0)
             {
                 $(queue[i-1]).hide();
