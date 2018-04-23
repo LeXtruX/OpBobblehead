@@ -27,6 +27,12 @@ class Player
         this.idleQueue.push(arr);
     }
     
+    set FPS(i)
+    {
+        this.fps = i;
+        this.interval = (1/fps)*1000;
+    }
+    
     play()
     {
         var i = 0;
