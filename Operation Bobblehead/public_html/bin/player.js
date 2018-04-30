@@ -101,5 +101,15 @@ class Player
         $(this.element).children().hide();
         $(this.element).empty();
     }
+    
+    hide()
+    {
+        $(this.element).hide();
+    }
+    
+    show()
+    {
+        $(this.element).show();
+    }
 }
 
