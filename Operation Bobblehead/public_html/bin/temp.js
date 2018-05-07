@@ -4,9 +4,26 @@
  * and open the template in the editor.
  */
 
-var fps = 30;
-var interval = (1/fps)*1000;
+var fps = 15;
+var objerval = (1/fps)*1000;
 var animations = new Array();
+var intervals = [];
+
+/*var ws = new WebSocket('ws://localhost:8887/');
+ ws.onopen = function () {
+     console.log('socket connection opened properly');
+     ws.send("Hello World"); // send a message
+     console.log('message sent');
+ };
+
+ ws.onmessage = function (evt) {
+     console.log("Message received = " + evt.data);
+ };
+
+ ws.onclose = function () {
+     // websocket is closed.
+     console.log("Connection closed...");
+ };*/
 
 /*function loadAnimation()
 {
@@ -38,8 +55,8 @@ var animations = new Array();
         $('#animations').append(animation);
     });
 }*/
-
-var player = new Player("#player",30);
+/*
+var player = new Player("#player",15);
 //loadAnimation();
 
 function addAnim(string)
@@ -69,7 +86,6 @@ function loadCompanion(name)
     
     $.when(deferred).then(function()
     {
-        console.log(companion);
         loaders.push(loadIdles(companion.Idles));
         loaders.push(loadInteractions(companion.Interactions));
         
@@ -77,10 +93,8 @@ function loadCompanion(name)
         {
             player.hide();
             player.play();
-            setTimeout(function()
-            {
                 player.show();
-            }, 5000);
+            
         });
     });
 }
@@ -99,16 +113,11 @@ function loadIdles(obj)
     $.when.apply(null, loaders).done(function() 
     {
         var kids = $(element).children();
+        console.log(kids.length);
         for (i = 0; i < kids.length; i++)
         {
             var child = $(kids[i]).children().clone();
-            console.log(child);
-            for (j = 0; j < child.length; j++);
-            {
-                $(child[i]).hide();
-            }
             
-            console.log(child);
             player.addIdle(child);
         }
         //player.addIdle(kids);
@@ -171,9 +180,53 @@ function loadFrame(url, parent)
     img.onload = function()
     {
         deferred.resolve();
-        $(img).hide();
     };
     img.src = url;
+    $(img).attr("style", "display: none");
     $(parent).append(img);
     return deferred.promise();
 }
+*/
+
+var interactions = [];
+var q = EventList.getInstance();
+var iq = IdleList.getInstance();
+var mod = 0;
+$.getJSON("./testanimation/companion.json", function(data)
+{
+    var obj = data.Interactions;
+    for (i = 0; i < obj.length; i++)
+    {
+        $.getJSON(obj[i].JSON, function(data)
+        {
+            var ani = new Animation(data.Framerate);
+            ani.load(data);
+            interactions[data.Name] = ani;
+        });
+    }
+    obj = data.Idles;
+    for (i = 0; i < obj.length; i++)
+    {
+        $.getJSON(obj[i].JSON, function(data)
+        {
+            var ani = new Animation(data.Framerate);
+            ani.load(data);
+            iq.add(ani);
+        });
+    }
+});
+function start()
+{
+    q.loadNext();
+    q.next();
+}
+/*
+$.getJSON("./testanimation/test.json", function(data)
+{
+    console.log(data);
+    console.log(Animation("#player", data.Framerate));
+    var ani = Animation("#player", data.Framerate);
+    ani.load(data);
+    objeractions[data.Name] = ani;
+    q.add(objeractions['run']);
+});*/

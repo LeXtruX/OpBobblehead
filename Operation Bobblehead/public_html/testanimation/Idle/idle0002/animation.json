@@ -1,0 +1,37 @@
+{
+    "Name": "idle0002",
+    "Framerate" : 15,
+    "Frames":
+    [
+        "./testanimation/Idle/idle0002/Frames/img0001.png",
+        "./testanimation/Idle/idle0002/Frames/img0002.png",
+        "./testanimation/Idle/idle0002/Frames/img0003.png",
+        "./testanimation/Idle/idle0002/Frames/img0004.png",
+        "./testanimation/Idle/idle0002/Frames/img0005.png",
+        "./testanimation/Idle/idle0002/Frames/img0006.png",
+        "./testanimation/Idle/idle0002/Frames/img0007.png",
+        "./testanimation/Idle/idle0002/Frames/img0008.png",
+        "./testanimation/Idle/idle0002/Frames/img0009.png",
+        "./testanimation/Idle/idle0002/Frames/img0010.png",
+        "./testanimation/Idle/idle0002/Frames/img0011.png",
+        "./testanimation/Idle/idle0002/Frames/img0012.png",
+        "./testanimation/Idle/idle0002/Frames/img0013.png",
+        "./testanimation/Idle/idle0002/Frames/img0014.png",
+        "./testanimation/Idle/idle0002/Frames/img0015.png",
+        "./testanimation/Idle/idle0002/Frames/img0016.png",
+        "./testanimation/Idle/idle0002/Frames/img0017.png",
+        "./testanimation/Idle/idle0002/Frames/img0018.png",
+        "./testanimation/Idle/idle0002/Frames/img0019.png",
+        "./testanimation/Idle/idle0002/Frames/img0020.png",
+        "./testanimation/Idle/idle0002/Frames/img0021.png",
+        "./testanimation/Idle/idle0002/Frames/img0022.png",
+        "./testanimation/Idle/idle0002/Frames/img0023.png",
+        "./testanimation/Idle/idle0002/Frames/img0024.png",
+        "./testanimation/Idle/idle0002/Frames/img0025.png",
+        "./testanimation/Idle/idle0002/Frames/img0026.png",
+        "./testanimation/Idle/idle0002/Frames/img0027.png",
+        "./testanimation/Idle/idle0002/Frames/img0028.png",
+        "./testanimation/Idle/idle0002/Frames/img0029.png",
+        "./testanimation/Idle/idle0002/Frames/img0030.png"
+    ]
+}

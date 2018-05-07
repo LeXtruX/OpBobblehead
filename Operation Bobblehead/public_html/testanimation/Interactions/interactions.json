@@ -1,0 +1,20 @@
+{
+    "interactions":[
+        {
+            "Name": "pickle",
+            "JSON": "./testanimation/interactions/pickle/animation.json"
+        },
+        {
+            "Name": "run",
+            "JSON": "./testanimation/interactions/run/animation.json"
+        },
+        {
+            "Name": "spin",
+            "JSON": "./testanimation/interactions/spin/animation.json"
+        },
+        {
+            "Name": "squid",
+            "JSON": "./testanimation/interactions/squid/animation.json"
+        }
+    ]
+}

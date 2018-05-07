@@ -1,0 +1,38 @@
+{
+    "Name": "spin",
+    "Framerate" : 15,
+    "Frames": 
+    [
+        "./testanimation/Interactions/spin/Frames/img0001.png",
+        "./testanimation/Interactions/spin/Frames/img0002.png",
+        "./testanimation/Interactions/spin/Frames/img0003.png",
+        "./testanimation/Interactions/spin/Frames/img0004.png",
+        "./testanimation/Interactions/spin/Frames/img0005.png",
+        "./testanimation/Interactions/spin/Frames/img0006.png",
+        "./testanimation/Interactions/spin/Frames/img0007.png",
+        "./testanimation/Interactions/spin/Frames/img0008.png",
+        "./testanimation/Interactions/spin/Frames/img0009.png",
+        "./testanimation/Interactions/spin/Frames/img0010.png",
+        "./testanimation/Interactions/spin/Frames/img0011.png",
+        "./testanimation/Interactions/spin/Frames/img0012.png",
+        "./testanimation/Interactions/spin/Frames/img0013.png",
+        "./testanimation/Interactions/spin/Frames/img0014.png",
+        "./testanimation/Interactions/spin/Frames/img0015.png",
+        "./testanimation/Interactions/spin/Frames/img0016.png",
+        "./testanimation/Interactions/spin/Frames/img0017.png",
+        "./testanimation/Interactions/spin/Frames/img0018.png",
+        "./testanimation/Interactions/spin/Frames/img0019.png",
+        "./testanimation/Interactions/spin/Frames/img0020.png",
+        "./testanimation/Interactions/spin/Frames/img0021.png",
+        "./testanimation/Interactions/spin/Frames/img0022.png",
+        "./testanimation/Interactions/spin/Frames/img0023.png",
+        "./testanimation/Interactions/spin/Frames/img0024.png",
+        "./testanimation/Interactions/spin/Frames/img0025.png",
+        "./testanimation/Interactions/spin/Frames/img0026.png",
+        "./testanimation/Interactions/spin/Frames/img0027.png",
+        "./testanimation/Interactions/spin/Frames/img0028.png",
+        "./testanimation/Interactions/spin/Frames/img0029.png",
+        "./testanimation/Interactions/spin/Frames/img0030.png",
+        "./testanimation/Interactions/spin/Frames/img0031.png"
+    ]
+}

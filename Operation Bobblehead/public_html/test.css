@@ -8,9 +8,14 @@ and open the template in the editor.
     Author     : 
 */
 
-#animation
+.player
 {
     width: 400px;
     height: 300px;
     overflow:hidden;
+    position: absolute;
+}
+img
+{
+    width: 400px;
 }
